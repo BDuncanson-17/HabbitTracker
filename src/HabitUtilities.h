@@ -2,8 +2,8 @@
 // Created by bryan on 6/28/23.
 //
 
-#ifndef HABBITTRACKER_UTIL_H
-#define HABBITTRACKER_UTIL_H
+#ifndef HABBITTRACKER_HABITUTILITIES_H
+#define HABBITTRACKER_HABITUTILITIES_H
 
 #include <string>
 #include <vector>
@@ -14,7 +14,7 @@ namespace Constants {
     extern std::unordered_map<std::string, int> g_MonthMap;
 }
 
-class Util {
+class HabitUtilities {
 public:
 
     static std::vector<std::string> ReadFromDatabaseFile();
@@ -23,21 +23,7 @@ public:
 
 };
 
-class TimeStamp {
-public:
-    int month;
-    int day;
-    int year;
-    int hours;
-    int minutes;
-    int seconds;
-
-    Time();
-    
-    std::string ToCSVString();
-    
-    void PrintTime();
     
     
 
-#endif //HABBITTRACKER_UTIL_H
+#endif //HABBITTRACKER_HABITUTILITIES_H

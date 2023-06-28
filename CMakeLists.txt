@@ -3,4 +3,4 @@ project(HabbitTracker)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(HabbitTracker main.cpp src/Habbit.cpp src/Habbit.h src/Util.cpp src/Util.h src/Weight.cpp src/Weight.h)
+add_executable(HabbitTracker main.cpp src/HabitUtilities.cpp src/HabitUtilities.h src/DataTypes.cpp src/DataTypes.h)
