@@ -23,5 +23,21 @@ public:
 
 };
 
+class TimeStamp {
+public:
+    int month;
+    int day;
+    int year;
+    int hours;
+    int minutes;
+    int seconds;
+
+    Time();
+    
+    std::string ToCSVString();
+    
+    void PrintTime();
+    
+    
 
 #endif //HABBITTRACKER_UTIL_H
