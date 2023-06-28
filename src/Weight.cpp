@@ -47,3 +47,18 @@ std::string WeightDataPoint::CreateDBString(){
     return ss.str() +"\n";
 }
 
+WeightData::WeightData() {
+    std::vector<std::string> dbstrs = Util::ReadFromDatabaseFile();
+    for(const std::string& dpstr : dbstrs){
+        std::vector<int> datapt(5);
+        int i = 0;
+        std::stringstream ss(dpstr);
+        std::string token;
+
+        while (std::getline(ss, token, ',')) {
+            int value = std::stoi(token);
+            datapt[i++]=value;
+        }
+        data.push_back(datapt);
+    }
+}
